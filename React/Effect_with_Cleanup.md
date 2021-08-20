@@ -1,6 +1,6 @@
 # Memory Leak When using useEffect
 ## 상황
-```jas
+```javascript
 export const App = () => {
   const handleCardClick = (e) => {
     setClickMovie(e);
@@ -32,7 +32,7 @@ export const App = () => {
 또한 Dan Abranmov의 'A Complete Guide to useEffect' 번역본에서는 이렇게 알려준다
 " 컴포넌트가 랜더링 안에 있는 모든 함수는 (이벤트 핸들러, 이펙트, 타임아웃이나 그 안에서 호출되는 API 등) 랜더가 호출될 때 정의된 props와 state 값을 잡아둔다.
 ## Solution
-```jas
+```javascript
 useEffect(() => {
     let unmounted = false;
     getMovies()
