@@ -1,5 +1,5 @@
 # Memory Leak When using useEffect
-## 상황
+## Case
 ```javascript
 export const App = () => {
   const handleCardClick = (e) => {
@@ -47,7 +47,7 @@ useEffect(() => {
 ```
 위 코드에서처럼 변수를 선언해 useEffect가 Cleanup없이 리랜더링하지 못하도록 방지할 수 있다.
 
-## 결론
+## Conclude
 공식 문서와 위에 언급된 책의 내용을 근거로 보자면 랜더링의 작동 원리와 관련이 있는 것으로 생각이 든다. 리엑트는 브라우저가 페인트를 하고 난 이후에 이펙트를 실행하기 때문에 스크린 업데이트를 가로막지 않고 빠르게 앱을 만들 수 있는 장점이 있지만 이로 인해 이펙트의 Cleanup이 미루질 수 있다. 그러는 바람에 Effect 새로 전달 받은 props의 값으로 리렌더링된 이후에 Cleanup을 하게 된다. 이때 Cleanup은 여전히 이전 props값을 보고 있다. 즉, Cleanup이 정의된 시점의 랜더링에 있던 값을 읽어오는 것이다. 그로인해 이전 값과 새로 받은 값이 충돌되어 메모리 누수가 날 수 있다는 것이다. 
 완벽한 정리가 아니라 추후 수정과 업데이트가 있을 수 있다.
 
