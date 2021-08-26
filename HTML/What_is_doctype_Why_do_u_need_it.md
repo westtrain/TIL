@@ -16,6 +16,11 @@ DTD의 역할은 HTML이 어떤 버전으로 작성되었는지 미리 선�
 
     doctype은 html 파일의 상단에 선언되고 닫히는 테크는 없고 대소문자를 구분하지 않는다
 
+    HTML 4.01에서 DOCTYPE 선언은 SGML을 기반으로 하기 때문에 DTD를 참조해야 한다. 
+
+    하지만 HTML5는 SGML을 기반으로 하지 않기 때문에 DTD를 참조할 필요가 없다.
+
+
 ref:
 
 [don't forget doctype](https://www.w3.org/QA/Tips/Doctype)
