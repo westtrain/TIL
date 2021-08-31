@@ -36,10 +36,9 @@
 
     ```jsx
     const obj  = { a : function(a,b){
-    											console.log(this);
-    											return a+b
-    											}
-    						 }
+                           console.log(this);
+                           return a+b }
+    	     }
     obj.a(1,2) // 객체에서 함수가 실행되는 동안 this는 객체를 가지고 있음을 콘솔보여준다.
     console => {a: ƒ}
 
