@@ -9,8 +9,8 @@
 ### static
   문서의 보통의 흐름에 기반하여 element의 위치를 정해 배치한다. 일반적으로는 차례대로 왼쪽에서 오른쪽, 위에서 아래로 쌓인다.
 
-    ref:
+  ref:
 
-    [Engineering Blog by Dale Seo](https://www.daleseo.com/?tag=position)
+  [Engineering Blog by Dale Seo](https://www.daleseo.com/?tag=position)
 
-    [(CSS) CSS 포지션(position) - static, relative, absolute, fixed](https://www.zerocho.com/category/CSS/post/5864f3b59f1dc000182d3ea1)
+  [(CSS) CSS 포지션(position) - static, relative, absolute, fixed](https://www.zerocho.com/category/CSS/post/5864f3b59f1dc000182d3ea1)
