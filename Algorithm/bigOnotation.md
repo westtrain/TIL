@@ -1,0 +1,11 @@
+# Big O Notation
+- 코드의 효율성을 표시하는 방식
+- 사용 이유
+    - It's important to have a precise vocabulary to talk about how our code performs
+        - 코드의 성능에 대해 정확히 이야기 할 수 있다.
+    - Useful for discussing trade-offs between different approaches
+        - 다른 접근법들 사이에 절충안을 토의하는데 유용함
+    - When your code slows down or crashes, identifying parts of the code that are inefficient can help us find pain points in our applications
+        - 코드가 느리거나 충돌이 발생할 때, 앱에서 코드의 비효율적인 어떤 부분이 문제인지 찾도록 도움을 줄 수 있다.
+    - Less important: it comes up in interviews!
+        - 인터뷰에 나온다!
