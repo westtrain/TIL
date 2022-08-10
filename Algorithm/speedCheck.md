@@ -47,3 +47,43 @@
         // 성능을 측정할 코드
         console.timeEnd('test')
         ```
+### 시간복잡도 시각화(Time Complex Visualization)
+
+- 아래의 함수를 통해서 연산자 갯수가 함수 실행 속도에 얼마나 영향을 주는지 그래프로 확인해보자
+    
+    ```jsx
+    function addUpToSecond(n){
+    	return n * (n + 1) / 2;
+    }
+    ```
+    
+    - n = 10000인 경우 아래의 그래프가 만들어진다. y축의 단위는 마이크로초이다.
+        
+        ![Screen Shot 2022-08-10 at 12.48.55 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9738efd7-a76d-4d37-8c49-7654ddca0da3/Screen_Shot_2022-08-10_at_12.48.55_AM.png)
+        
+    - n = 100000인 경우, 아래의 그래프를 만듬
+        
+        ![Screen Shot 2022-08-10 at 12.50.11 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3ee84456-21f8-484c-a50a-ffed3c7f0d47/Screen_Shot_2022-08-10_at_12.50.11_AM.png)
+        
+    - 단순하게 보면 그래프가 크게 변동되어 속도에 큰 영향을 주는 것 같지만 사실 y축은 단위가 마이크로초이기 때문에 변동폭이 크다고 볼 수 없다. 연산자가 아무리 많아도 속도에 큰 영향을 주지 않는다.
+    - 아래의 함수를 통해 반복 연산이 실행 속도에 얼마나 영향을 주는지 살펴보자.
+        
+        ```jsx
+        function addUpToFirst(){
+        	var total = 0;
+        	for(let i = 0; i <= n; i++){
+        		total += 1;
+        	}
+        	return total;
+        }
+        ```
+        
+        - n = 10000인 경우, 파란색 그래프처럼 나타나고 아래의 회색 그래프보다 속도가 매우 느린 것을 확인할 수 있다.
+            
+            ![Screen Shot 2022-08-10 at 12.54.47 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/56869402-2b92-44d5-ba83-15ea868464c9/Screen_Shot_2022-08-10_at_12.54.47_AM.png)
+            
+        - n = 1000000000인 경우, 속도는 1초를 넘어섰다. (파란색 그래프)
+            
+            ![Screen Shot 2022-08-10 at 12.56.12 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7accf692-f954-482d-86a1-6d9b747a6ea1/Screen_Shot_2022-08-10_at_12.56.12_AM.png)
+            
+- 두 함수가 만드는 그래프를 통해서 시간복잡도에 연산자의 숫자로만 이루어진 함수가 훨씬 유리하다는 점을 확인 가능하다.
